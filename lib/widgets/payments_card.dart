@@ -2,12 +2,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:mix_burguer_app/models/cart_model.dart';
 
-class ShipCard extends StatefulWidget {
+class PaymentsCard extends StatefulWidget {
   @override
-  _ShipCardState createState() => _ShipCardState();
+  _PaymentsCardState createState() => _PaymentsCardState();
 }
 
-class _ShipCardState extends State<ShipCard> {
+class _PaymentsCardState extends State<PaymentsCard> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class _ShipCardState extends State<PaymentsCard> {
   bool _isSwitched = true;
 
   @override

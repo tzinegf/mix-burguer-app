@@ -4,41 +4,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e065faf9-89d5-46cb-ac10-dd83530e137c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mix-burguer-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mix-burguer-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e065faf9-89d5-46cb-ac10-dd83530e137c" name="Default Changelist" comment="Mix Burguer APP v8.0.0">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/assets/mix_burguer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/assets/money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/assets/money2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/datas/cart_product.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/datas/product_data.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/main.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/models/cart_model.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/models/user_model.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/cart_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/category_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/home_secreen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/login_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/order_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/product_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/screens/singup_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tabs/home_tab.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tabs/orders_tab.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tabs/products_tab.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tiles/cart_tile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tiles/category_tile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tiles/drawer_tile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tiles/order_tile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/tiles/product_tile.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/widgets/cart_button.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/widgets/cart_price.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/widgets/custom_drawer.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/widgets/discount_cart.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix_burguer_app/lib/widgets/ship_card.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cart_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/ship_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/payments_card.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -65,10 +35,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/widgets/ship_card.dart">
+        <entry file="file://$PROJECT_DIR$/lib/widgets/payments_card.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -128,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/cart_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="1598">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -156,11 +126,12 @@
         <option value="$PROJECT_DIR$/android/gradle.properties" />
         <option value="$PROJECT_DIR$/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/lib/screens/singup_screen.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/cart_screen.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/screens/login_screen.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/widgets/ship_card.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/cart_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/widgets/payments_card.dart" />
       </list>
     </option>
   </component>
@@ -175,8 +146,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,16 +155,35 @@
               <item name="mix-burguer-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="mix-burguer-app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mix-burguer-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mix-burguer-app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mix-burguer-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mix-burguer-app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mix-burguer-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mix-burguer-app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="two.files.diff.last.used.folder" value="$USER_HOME$/Desktop/loja/loja_virtual" />
   </component>
@@ -234,13 +224,28 @@
       <option name="project" value="LOCAL" />
       <updated>1558658236541</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mix Burguer APP v8.0.0">
+      <created>1558659452728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558659452728</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Mix Burguer APP v8.0.0">
+      <created>1558659508695</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558659508695</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14599092" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14599092" />
       <window_info id="Captures" order="1" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -255,10 +260,10 @@
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="4" weight="0.44850498" />
       <window_info anchor="bottom" id="Debug" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5023548" side_tool="true" weight="0.5282392" />
       <window_info anchor="bottom" id="Flutter Performance" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32405892" />
       <window_info anchor="bottom" id="Find" order="11" weight="0.32890365" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -270,6 +275,9 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="Mix Burguer APP v8.0.0" />
     <option name="LAST_COMMIT_MESSAGE" value="Mix Burguer APP v8.0.0" />
   </component>
@@ -439,18 +447,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/cart_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="1598">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widgets/ship_card.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widgets/payments_card.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
