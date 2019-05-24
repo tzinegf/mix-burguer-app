@@ -8,13 +8,6 @@ class PaymentsCard extends StatefulWidget {
 }
 
 class _PaymentsCardState extends State<PaymentsCard> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
-class _ShipCardState extends State<PaymentsCard> {
   bool _isSwitched = true;
 
   @override
