@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "819963229368",
+    "firebase_url": "https://mixburguer-71e7c.firebaseio.com",
+    "project_id": "mixburguer-71e7c",
+    "storage_bucket": "mixburguer-71e7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819963229368:android:596ba76008a7974a",
+        "android_client_info": {
+          "package_name": "br.com.tebbas.mix_burguer_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819963229368-b5478idna4nbdhjno1i5hvql9bohd6mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3OOHltLvzofxiHcinWOXBuB_Dcid8-7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819963229368-b5478idna4nbdhjno1i5hvql9bohd6mu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
