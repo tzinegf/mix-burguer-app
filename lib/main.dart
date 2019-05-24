@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             return ScopedModel<CartModel>(
               model: CartModel(model),
               child: MaterialApp(
-                  title: "Flutter's Clothing",
+                  title: "Mix Burguer",
                   theme: ThemeData(
                       primarySwatch: Colors.red,
                       primaryColor: Colors.red
