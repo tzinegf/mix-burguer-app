@@ -17,6 +17,7 @@ class CartModel extends Model {
   double troco = 0;
   double valoPTroco = 0;
   bool stateButton = false;
+  int status = 0;
 
   CartModel(this.user) {
     if (user.isloggedIn()) _loadCartItens();
@@ -115,6 +116,10 @@ class CartModel extends Model {
     return this.troco;
   }
 
+  DateTime setDataOrder(){
+    return DateTime.now();
+  }
+
   Future<String> finishOrder() async {
     if (products.length == 0) return null;
 
@@ -124,6 +129,8 @@ class CartModel extends Model {
     double productsPrices = getProductsPrice();
     double shiPrices = getShipPrice();
     double discount = getDiscount();
+    DateTime data = setDataOrder();
+
 
     DocumentReference refOrder =
         await Firestore.instance.collection("orders").add({
@@ -133,10 +140,11 @@ class CartModel extends Model {
       "productsPrice": productsPrices,
       "discount": discount,
       "totalPrice": productsPrices - discount + shiPrices,
-      "status": 1,
+      "status": 0,
       "payMode": payMode,
       "troco": troco,
-      "valoPTroco": valoPTroco
+      "valoPTroco": valoPTroco,
+          "dataOrder": data,
     });
     await Firestore.instance
         .collection("users")

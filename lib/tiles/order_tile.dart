@@ -65,18 +65,15 @@ class OrderTile extends StatelessWidget {
                         _buildCircle("3", "Entregue", status, 3)
                       ],
                     ),
-                    Row(
-                      children: <Widget>[
-                        Text("Tempo para cancelamento:"),
-
-                        Text( "teste"),
-                        Container(
-                          child: RaisedButton(
-                              child: Text("Cancelar Pedido"),
-                              onPressed: (){}),
-                        ),
-                      ],
-                    )
+                    Divider(),
+                    Center(
+                      child: Container(
+                        child: RaisedButton(
+                            shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2))),
+                            child: Text("Cancelar Pedido"),
+                            onPressed: () {}),
+                      ),
+                    ),
 
 
 
