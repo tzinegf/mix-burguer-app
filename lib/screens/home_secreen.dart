@@ -35,8 +35,10 @@ class HomeScreen extends StatelessWidget {
           ),
           body: OrdersTab(),
           drawer: CustomDrawer(_pageController),
-        )
+        ),
       ],
     );
   }
 }
+
+

@@ -1,15 +1,22 @@
+import 'package:countdown/countdown.dart';
 import 'dart:collection';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class OrderTile extends StatelessWidget {
+class OrderTile extends StatefulWidget {
   final String orderId;
 
   OrderTile(this.orderId);
 
   @override
+  _OrderTileState createState() => _OrderTileState();
+}
+
+class _OrderTileState extends State<OrderTile> {
+  @override
   Widget build(BuildContext context) {
+    Duration x = Duration(minutes: 5);
     return Card(
       margin: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: Padding(
@@ -17,7 +24,7 @@ class OrderTile extends StatelessWidget {
         child: StreamBuilder<DocumentSnapshot>(
             stream: Firestore.instance
                 .collection("orders")
-                .document(orderId)
+                .document(widget.orderId)
                 .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
@@ -64,16 +71,18 @@ class OrderTile extends StatelessWidget {
                         ),
                         _buildCircle("3", "Entregue", status, 3)
                       ],
-                    ),
+                    ),/*
                     Divider(),
                     Center(
                       child: Container(
                         child: RaisedButton(
                             shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(2))),
                             child: Text("Cancelar Pedido"),
-                            onPressed: () {}),
+                            onPressed: (){}
+
+                            ),
                       ),
-                    ),
+                    ),*/
 
 
 
