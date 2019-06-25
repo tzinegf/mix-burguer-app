@@ -11,6 +11,7 @@ class CartModel extends Model {
   UserModel user;
   List<CartProduct> products = [];
   String cuponCode;
+  String obs ="";
   int discountPercent = 0;
   bool isLoading = false;
   bool payMode = true;
@@ -26,6 +27,8 @@ class CartModel extends Model {
   void updatePrices() {
     notifyListeners();
   }
+
+
 
   void addCartItem(CartProduct cartProduct) {
     products.add(cartProduct);
@@ -90,6 +93,10 @@ class CartModel extends Model {
     this.discountPercent = discount;
   }
 
+  void setObs(String obs) {
+    this.obs = obs;
+  }
+
   double getProductsPrice() {
     double price = 0.0;
     for (CartProduct c in products) {
@@ -141,6 +148,7 @@ class CartModel extends Model {
       "discount": discount,
       "totalPrice": productsPrices - discount + shiPrices,
       "status": 0,
+          "obs":obs,
       "payMode": payMode,
       "troco": troco,
       "valoPTroco": valoPTroco,
@@ -168,6 +176,13 @@ class CartModel extends Model {
     discountPercent = 0;
     isLoading = false;
     notifyListeners();
+    obs= "";
+    valoPTroco = 0;
+    troco=0;
+    payMode =true;
     return refOrder.documentID;
+
+
+
   }
 }

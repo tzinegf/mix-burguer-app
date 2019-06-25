@@ -4,6 +4,7 @@ import 'package:mix_burguer_app/models/user_model.dart';
 import 'package:mix_burguer_app/tiles/cart_tile.dart';
 import 'package:mix_burguer_app/widgets/cart_price.dart';
 import 'package:mix_burguer_app/widgets/discount_cart.dart';
+import 'package:mix_burguer_app/widgets/obs_card.dart';
 import 'package:mix_burguer_app/widgets/payments_card.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -97,6 +98,7 @@ class CartScreen extends StatelessWidget {
               ),
               DiscountCart(),
               PaymentsCard(),
+              ObsCard(),
               CartPrice(()async{
                String orderId = await model.finishOrder();
                if(orderId != null)
