@@ -85,8 +85,9 @@ class CartPrice extends StatelessWidget {
                 RaisedButton(
                   child: Text("Finalizar Pedido"),
                   textColor: Colors.white,
-                  color: Theme.of(context).primaryColor,
-                  onPressed:model.stateButton? buy: null,
+                  color:Theme.of(context).primaryColor,
+                  onPressed: model.stateButton? buy:null,
+
                 )
               ],
             );

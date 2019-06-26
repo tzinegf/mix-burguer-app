@@ -27,6 +27,9 @@ class CartModel extends Model {
   void updatePrices() {
     notifyListeners();
   }
+  String getProducId() {
+    return products[0].pid;
+  }
 
 
 
@@ -177,6 +180,7 @@ class CartModel extends Model {
     isLoading = false;
     notifyListeners();
     obs= "";
+    stateButton = false;
     valoPTroco = 0;
     troco=0;
     payMode =true;

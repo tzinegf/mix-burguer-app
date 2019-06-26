@@ -119,16 +119,18 @@ class _ProductScreenState extends State<ProductScreen> {
                   child: RaisedButton(
                     onPressed: () {
                       if (UserModel.of(context).isloggedIn()) {
-                        CartProduct cartProduct = CartProduct();
-                        cartProduct.complement = comp;
-                        cartProduct.qtde = 1;
-                        cartProduct.pid = productData.id;
-                        cartProduct.category = productData.category;
-                        cartProduct.productData = productData;
 
-                        CartModel.of(context).addCartItem(cartProduct);
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => CartScreen()));
+                          CartProduct cartProduct = CartProduct();
+                          cartProduct.complement = comp;
+                          cartProduct.qtde = 1;
+                          cartProduct.pid = productData.id;
+                          cartProduct.category = productData.category;
+                          cartProduct.productData = productData;
+
+                          CartModel.of(context).addCartItem(cartProduct);
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => CartScreen()));
+
                       } else {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => LoginScreen()));

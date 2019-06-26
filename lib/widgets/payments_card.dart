@@ -9,6 +9,7 @@ class PaymentsCard extends StatefulWidget {
 
 class _PaymentsCardState extends State<PaymentsCard> {
   bool _isSwitched = true;
+  double sizeIcon = 45;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +31,17 @@ class _PaymentsCardState extends State<PaymentsCard> {
               children: <Widget>[
                 Column(
                   children: <Widget>[
-                    Image(
-                      image: AssetImage(_isSwitched? "assets/money.png":"assets/money2.png"),
-                      height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        _isSwitched = true;
+                        CartModel.of(context).payMode = _isSwitched;
+                        CartModel.of(context).stateButton = false;
+                      },
+                      child: new Icon(
+                        const IconData(0xe900, fontFamily: 'icomoon'),
+                        size: 45,
+                        color: !_isSwitched ? Colors.grey[500] : Colors.green,
+                      ),
                     ),
                     Text(
                       _isSwitched ? "Dinheiro" : "",
@@ -41,24 +50,20 @@ class _PaymentsCardState extends State<PaymentsCard> {
                     ),
                   ],
                 ),
+                Column(),
                 Column(
                   children: <Widget>[
-                    Switch(
-                        inactiveThumbColor: Theme.of(context).primaryColor,
-                        inactiveTrackColor: Theme.of(context).accentColor,
-                        value: _isSwitched,
-                        onChanged: (value) {
-                          onChangeIsSwitched(value);
-                          CartModel.of(context).payMode =_isSwitched;
-                        }),
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Icon(
-                      Icons.credit_card,
-                      color: _isSwitched ? Colors.grey[500] : Colors.green,
-                      size: 45,
+                    GestureDetector(
+                      onTap: () {
+                        _isSwitched = false;
+                        CartModel.of(context).payMode = _isSwitched;
+                        CartModel.of(context).stateButton = true;
+                      },
+                      child: Icon(
+                        Icons.credit_card,
+                        color: _isSwitched ? Colors.grey[500] : Colors.green,
+                        size: 45,
+                      ),
                     ),
                     Text(
                       !_isSwitched ? "Cartão" : "",
@@ -82,25 +87,26 @@ class _PaymentsCardState extends State<PaymentsCard> {
                           hintText: "Troco para quanto?"),
                       onFieldSubmitted: (text) {
                         if (_isSwitched) {
-
-                          double total = CartModel.of(context).getProductsPrice()+CartModel.of(context).getShipPrice() - CartModel.of(context).getDiscount();
-                          if(double.parse(text)>= total && text.isNotEmpty){
-                            CartModel.of(context).troco = double.parse(text)-total;
-                            CartModel.of(context).valoPTroco = double.parse(text);
+                          double total =
+                              CartModel.of(context).getProductsPrice() +
+                                  CartModel.of(context).getShipPrice() -
+                                  CartModel.of(context).getDiscount();
+                          if (double.parse(text) >= total && text.isNotEmpty) {
+                            CartModel.of(context).troco =
+                                double.parse(text) - total;
+                            CartModel.of(context).valoPTroco =
+                                double.parse(text);
                             CartModel.of(context).stateButton = true;
-                          }else{
+                          } else {
                             Scaffold.of(context).showSnackBar(
-                              SnackBar(content: Text("O valor deve ser maior ou igual ao Total"),
-                                backgroundColor: Theme
-                                    .of(context)
-                                    .primaryColor,
+                              SnackBar(
+                                content: Text(
+                                    "O valor deve ser maior ou igual ao Total"),
+                                backgroundColor: Theme.of(context).primaryColor,
                               ),
-
                             );
                             CartModel.of(context).stateButton = false;
                           }
-
-
                         }
                       },
                     )
