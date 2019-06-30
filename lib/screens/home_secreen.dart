@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mix_burguer_app/tabs/history_tab.dart';
 import 'package:mix_burguer_app/tabs/home_tab.dart';
 import 'package:mix_burguer_app/tabs/orders_tab.dart';
 import 'package:mix_burguer_app/tabs/products_tab.dart';
@@ -34,6 +35,14 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
           ),
           body: OrdersTab(),
+          drawer: CustomDrawer(_pageController),
+        ),
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Hitórico de Pedidos"),
+            centerTitle: true,
+          ),
+          body: HistoryTab(),
           drawer: CustomDrawer(_pageController),
         ),
       ],

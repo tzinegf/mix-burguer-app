@@ -31,8 +31,6 @@ class CartModel extends Model {
     return products[0].pid;
   }
 
-
-
   void addCartItem(CartProduct cartProduct) {
     products.add(cartProduct);
     Firestore.instance
@@ -174,6 +172,10 @@ class CartModel extends Model {
     for (DocumentSnapshot doc in query.documents) {
       doc.reference.delete();
     }
+
+
+    hitoricOrder();
+
     products.clear();
     cuponCode = null;
     discountPercent = 0;
@@ -189,4 +191,37 @@ class CartModel extends Model {
 
 
   }
+
+  Future hitoricOrder() async {
+
+    double productsPrices = getProductsPrice();
+    DateTime data = setDataOrder();
+
+
+    DocumentReference refOrder =
+    await Firestore.instance.collection("historicOrders").add({
+      "clientId": user.firebaseUser.uid,
+      "products": products.map((cartProduct) => cartProduct.toMap()).toList(),
+      "totalPrice": productsPrices,
+      "dataOrder": data,
+    });
+    await Firestore.instance
+        .collection("users")
+        .document(user.firebaseUser.uid)
+        .collection("historicOrders")
+        .document(refOrder.documentID)
+        .setData({
+      "historicId": refOrder.documentID,
+    });
+
+    QuerySnapshot query = await Firestore.instance
+        .collection("users")
+        .document(user.firebaseUser.uid)
+        .collection("cart")
+        .getDocuments();
+    for (DocumentSnapshot doc in query.documents) {
+      doc.reference.delete();
+    }
+  }
+
 }

@@ -37,6 +37,7 @@ dependencies:
   path_provider: ^0.5.0+1
   url_launcher: ^5.0.1
   flutter_masked_text: ^0.8.0
+  intl: ^0.15.8
 
 dev_dependencies:
   flutter_test:
