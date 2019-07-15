@@ -92,6 +92,8 @@ class CustomDrawer extends StatelessWidget {
               DrawerTile(Icons.list, "Produtos", pageController, 1),
               DrawerTile(Icons.playlist_add_check, "Meus Pedidos", pageController, 2),
               DrawerTile(Icons.history, "Histórico de Pedidos", pageController, 3),
+              DrawerTile(Icons.person, "Minhas Informações", pageController, 4),
+              DrawerTile(Icons.access_time, "Compartilhe o APP", pageController, 5),
             ],
           )
         ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:mix_burguer_app/datas/cart_product.dart';
 import 'package:mix_burguer_app/datas/product_data.dart';
 import 'package:carousel_pro/carousel_pro.dart';
@@ -11,6 +12,7 @@ import 'login_screen.dart';
 class ProductScreen extends StatefulWidget {
   final ProductData productData;
 
+
   ProductScreen(this.productData);
 
   @override
@@ -19,9 +21,20 @@ class ProductScreen extends StatefulWidget {
 
 class _ProductScreenState extends State<ProductScreen> {
   final ProductData productData;
+  final Map<String, dynamic> daysOfWeek = {
+    'Sunday': 0,
+    'Monday': 1,
+    'Tuesday': 2,
+    'Wednesday': 3,
+    'Thursday': 4,
+    'Friday': 5,
+    'Saturday': 6
+  };
   String comp;
+  String formattedDate = DateFormat('EEEE').format(new DateTime.now());
 
   _ProductScreenState(this.productData);
+
 
   @override
   Widget build(BuildContext context) {
@@ -81,10 +94,13 @@ class _ProductScreenState extends State<ProductScreen> {
                   height: 10.0,
                 ),
                 SizedBox(
-                  child: Text("${productData.description}",style:TextStyle(fontSize: 15.0),),
+                  child: Text(
+                    "${productData.description}",
+                    style: TextStyle(fontSize: 15.0),
+                  ),
                 ),
 
-                  /*ListView(
+                /*ListView(
                       scrollDirection: Axis.horizontal,
                       padding: EdgeInsets.symmetric(vertical: 4.0),
                       children: Text(),productData.complements.map((complements) {
@@ -119,28 +135,30 @@ class _ProductScreenState extends State<ProductScreen> {
                   child: RaisedButton(
                     onPressed: () {
                       if (UserModel.of(context).isloggedIn()) {
+                        CartProduct cartProduct = CartProduct();
+                        cartProduct.complement = comp;
+                        cartProduct.qtde = 1;
+                        cartProduct.pid = productData.id;
+                        cartProduct.category = productData.category;
+                        cartProduct.productData = productData;
 
-                          CartProduct cartProduct = CartProduct();
-                          cartProduct.complement = comp;
-                          cartProduct.qtde = 1;
-                          cartProduct.pid = productData.id;
-                          cartProduct.category = productData.category;
-                          cartProduct.productData = productData;
-
-                          CartModel.of(context).addCartItem(cartProduct);
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => CartScreen()));
-
+                        CartModel.of(context).addCartItem(cartProduct);
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => CartScreen()));
                       } else {
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => LoginScreen()));
                       }
                     },
                     child: Text(
+                      daysOfWeek.containsKey(formattedDate)?"Adicionar ao carrinho":"Ainda não abrimos,volte mais tarde! ",
+                      /*
                       UserModel.of(context).isloggedIn()
-                          ? "Adicionar ao carrinho"
+                          ? formattedDate
                           : "Entre para Comprar",
                       style: TextStyle(fontSize: 18.0),
+                      */
+
                     ),
                     color: primaryColor,
                     textColor: Colors.white,

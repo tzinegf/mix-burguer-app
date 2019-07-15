@@ -21,8 +21,9 @@ class HistoryTab extends StatelessWidget {
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return Center(
-              child: CircularProgressIndicator(),
+              child: Text("Não há nada por aqui!",style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
             );
+
           } else {
             return ListView(
                 children: snapshot.data.documents
